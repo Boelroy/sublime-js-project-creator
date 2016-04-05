@@ -7,4 +7,4 @@
 
 
 #演示
-![](https://raw.githubusercontent.com/Boelroy/sublime-js-project-creator/master/js-project-creator.gif)
+<img src="https://raw.githubusercontent.com/Boelroy/sublime-js-project-creator/master/js-project-creator.gif" width="100%">
