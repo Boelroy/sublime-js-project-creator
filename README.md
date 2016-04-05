@@ -3,8 +3,10 @@
 
 #目前支持文件
 
-[.jshint](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc) [.editorconfig](http://editorconfig.org)
+[.jshint](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc) [.editorconfig](http://editorconfig.org)(可能需要安装SublimeLiner)
 
+#安装
+Preference->Browser Packages 然后将项目文件夹拷贝进刚才的文件夹
 
 #演示
 <img src="https://raw.githubusercontent.com/Boelroy/sublime-js-project-creator/master/js-project-creator.gif" width="100%">
