@@ -1,0 +1,10 @@
+[
+  {
+    "id": "tools",
+    "children":
+    [
+      {"id": "jsprojcreator"},
+      {"command": "create_js_project", "caption": "Create a JS Project"},
+    ]
+  }
+]
