@@ -1,0 +1,4 @@
+# npm
+npm-debug.log*
+.npm
+node_modules
