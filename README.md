@@ -4,6 +4,7 @@
 #目前支持文件
 
 [.jshint](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc) [.editorconfig](http://editorconfig.org)(可能需要安装SublimeLiner)
+ .gitignore
 
 #安装
 Preference->Browser Packages 然后将项目文件夹拷贝进刚才的文件夹
