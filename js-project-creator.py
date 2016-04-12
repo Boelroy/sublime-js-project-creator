@@ -2,14 +2,18 @@ import sublime, sublime_plugin
 import threading
 import os
 from shutil import copy2
+import subprocess
 
 class CreateJsProjectCommand(sublime_plugin.WindowCommand):
   def run(self):
     folders = self.window.folders()
     if len(folders):
       folder = folders[0]
-      thread = CopyFileThread(folder)
-      thread.start()
+      cpythread = CopyFileThread(folder)
+      cpythread.start()
+
+      npmthread = CreateNpmPackageThread(folder)
+      npmthread.start()
 
 
 class CopyFileThread(threading.Thread):
@@ -28,3 +32,10 @@ class CopyFileThread(threading.Thread):
     except Exception as e:
       print('copy file error when copy ', e)
 
+class CreateNpmPackageThread(threading.Thread):
+  def __init__(self, folder):
+    self.folder = folder
+    threading.Thread.__init__(self)
+
+  def run(self):
+    subprocess.Popen(['npm', 'init', '-y'], shell=False, cwd=self.folder, env={'PATH': "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"})
