@@ -6,6 +6,9 @@
 [.jshint](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc) [.editorconfig](http://editorconfig.org)(可能需要安装SublimeLiner)
  .gitignore
 
+#自定义
+你可以把你需要的文件都放到resource中去，每次生成项目的时候就会自动的把resource中的文件放到你的项目中去
+
 #安装
 Preference->Browser Packages 然后将项目文件夹拷贝进刚才的文件夹
 
