@@ -38,4 +38,10 @@ class CreateNpmPackageThread(threading.Thread):
     threading.Thread.__init__(self)
 
   def run(self):
-    subprocess.Popen(['npm', 'init', '-y'], shell=False, cwd=self.folder, env={'PATH': "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"})
+    try:
+      subprocess.Popen(['npm', 'init', '-y'],
+          shell=False,
+          cwd=self.folder,
+          env={'PATH': "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"})
+    except Exception as e:
+      print('exec npm init error: ', e)
